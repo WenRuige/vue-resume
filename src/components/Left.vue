@@ -32,8 +32,8 @@
           邮箱:gewenrui0.0@gmail.com
 
 
-
-          <hr>
+ <!--style="border:0;background-color:#648fc4;height:1px;"-->
+          <hr id="hr_split" v-bind:style="hr_split">
         </div>
         <!--第二部分-->
         <div id="second_part" v-bind:style="second_part">
@@ -59,7 +59,7 @@
           <li>与前端开发微信签到,排行榜活动,38妇女节等活动(Laravel),使用Redis作为缓存层,编写异步队列将数据存入Mysql。</li>
           <li>负责企业版晶算师开发编写,与Android,Ios,Wap端进行交互,实现了普通版和企业版功能区分等。</li>
           <li>负责H5对接设计以及开发,与第三方进行api对接,api接口采用AES加密,实现了对方在我方购买产品后数据实现实时回传至对方平台进行展示。</li>
-          <hr>
+          <hr  v-bind:style="hr_split">
         </div>
         <!--第三部分-->
         <div id="third_part" v-bind:style="third_part">
@@ -139,7 +139,8 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
         title_one: {},
         title_two: {},
         second_part:{},
-        third_part:{}
+        third_part:{},
+        hr_split:{}
 
       }
     }, methods: {
@@ -171,13 +172,16 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
       }, show: function () {
 
         var dataObj = []; //声明一个数组
-        //右侧整个布局
+        //右侧整个布局数组
         dataObj[0] = "right_content/margin/20px";
         dataObj[1] = "first_part/font-size/10px";
         dataObj[2] = "title_one/font-weight/bold";
         dataObj[3] = "title_two/font-weight/bold";
         dataObj[4] = "second_part/font-size/10px";
         dataObj[5] = "third_part/font-size/10px";
+        dataObj[6] = "hr_split/background-color/#3b71b4";
+        dataObj[7] = "hr_split/border/0px"
+        dataObj[8] = "hr_split/height/1px"
 
 
         //获取右侧数组长度
@@ -250,7 +254,11 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
     color: black;
     box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
   }
-
+   /*#hr_split{*/
+     /*background-color: red;*/
+     /*border: 0px;*/
+     /*height: 1px;*/
+   /*}*/
   /*#right-content {*/
   /*margin: 20px;*/
   /*}*/
