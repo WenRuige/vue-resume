@@ -77,10 +77,15 @@
           <li>了解React.js/es6的使用</li>
           <li>熟练使用Mysql以及查询优化</li>
           <li>具有一定的网络安全意识,良好的编码风格</li>
-
-
+          <hr  v-bind:style="hr_split">
         </div>
 
+        <div id="fourth_part" v-bind:style="third_part">
+          <span id="title_three" v-bind:style="title_two">其他开发经验:</span>
+          <li>暂无</li>
+
+          <!--<hr  v-bind:style="hr_split">-->
+        </div>
       </div>
 
 
@@ -138,8 +143,10 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
         first_part: {},
         title_one: {},
         title_two: {},
+        title_three:{},
         second_part:{},
         third_part:{},
+        fourth_part:{},
         hr_split:{}
 
       }
@@ -180,8 +187,10 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
         dataObj[4] = "second_part/font-size/10px";
         dataObj[5] = "third_part/font-size/10px";
         dataObj[6] = "hr_split/background-color/#3b71b4";
-        dataObj[7] = "hr_split/border/0px"
-        dataObj[8] = "hr_split/height/1px"
+        dataObj[7] = "hr_split/border/0px";
+        dataObj[8] = "hr_split/height/1px";
+        dataObj[9] = "fourth_part/font-size/10px";
+        dataObj[10] = "title_three/font-weight/bold";
 
 
         //获取右侧数组长度
@@ -199,16 +208,16 @@ pre{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; whit
           if (i == this.$data.rightCounter) {
             //拆分js
             var result = this.$data.rightSplitArray[this.$data.rightCounter].split('/');
-            var obj_temp = "this.$data." + result[0]
-            this.$set(eval(obj_temp), result[1], result[2])
-            this.$data.rightCounter++
+            var obj_temp = "this.$data." + result[0];
+            this.$set(eval(obj_temp), result[1], result[2]);
+            this.$data.rightCounter++;
             break;
           }
         }
 
       }
       , randColor: function () {
-        var color = ["black", "red", "green", "gray"]
+        var color = ["black", "red", "green", "gray"];
         var randomNum = Math.random() * color.length;
         randomNum = parseInt(randomNum, 10)
       }
