@@ -12,18 +12,18 @@
     </div>
     <div class="div-inline" id="left">
       <!--  v-html 渲染-->
-      <div id="inner_content" v-html="message">
-      </div>
+      <!--<div id="inner_content" v-html="message">-->
+      <!--</div>-->
 
-      <!--<button v-on:click="test">开始</button>-->
-      动态追加style，vue-js实现
-
-
-      <button v-on:click="show">
-        开始
+      <!--&lt;!&ndash;<button v-on:click="test">开始</button>&ndash;&gt;-->
+      <!--动态追加style，vue-js实现-->
 
 
-      </button>
+      <!--<button v-on:click="show">-->
+        <!--开始-->
+
+
+      <!--</button>-->
 
     </div>
 
@@ -238,7 +238,7 @@
     width: 20%;
     height: 400px;
     margin-left: 100px;
-    box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+    /*box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);*/
   }
 
   #inner_content {
