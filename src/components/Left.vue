@@ -11,6 +11,11 @@
 
     </div>
     <div class="div-inline" id="left">
+
+     
+
+
+
       <!--  v-html 渲染-->
       <!--<div id="inner_content" v-html="message">-->
       <!--</div>-->
@@ -136,7 +141,8 @@
         second_part: {},
         third_part: {},
         fourth_part: {},
-        hr_split: {}
+        hr_split: {},
+        show:true
 
       }
     }, methods: {
@@ -165,7 +171,7 @@
         this.$data.leftCounter += 1;
 
 
-      }, show: function () {
+      }, showPage: function () {
 
         var dataObj = []; //声明一个数组
         //右侧整个布局数组
@@ -213,7 +219,7 @@
     },
 //    可以使用mounted进行挂载
     mounted: function () {
-      this.show()
+      this.showPage()
     }
   }
 </script>
@@ -254,6 +260,37 @@
     color: black;
     box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
   }
+
+
+
+  /*.bounce-enter-active {*/
+    /*animation: bounce-in .5s;*/
+  /*}*/
+  /*.bounce-leave-active {*/
+    /*animation: bounce-out .5s;*/
+  /*}*/
+  /*@keyframes bounce-in {*/
+    /*0% {*/
+      /*transform: scale(0);*/
+    /*}*/
+    /*50% {*/
+      /*transform: scale(1.5);*/
+    /*}*/
+    /*100% {*/
+      /*transform: scale(1);*/
+    /*}*/
+  /*}*/
+  /*@keyframes bounce-out {*/
+    /*0% {*/
+      /*transform: scale(1);*/
+    /*}*/
+    /*50% {*/
+      /*transform: scale(1.5);*/
+    /*}*/
+    /*100% {*/
+      /*transform: scale(0);*/
+    /*}*/
+  /*}*/
 
   /*#hr_split{*/
   /*background-color: red;*/
